@@ -13,7 +13,11 @@ const app = new Hono();
 
 app.use("*", pugRenderer());
 
-app.get("*", cache({ cacheName: "foo", wait: true }));
+app.get("*", cache({
+	cacheName: "foo",
+	cacheControl: "max-age=60",
+	wait: true,
+}));
 
 app.get("/", c => c.render("home"));
 
