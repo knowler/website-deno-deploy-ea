@@ -13,6 +13,8 @@ const app = new Hono();
 
 app.use("*", pugRenderer());
 
+app.get("*", cache({ cacheName: "foo", wait: true }));
+
 app.get("/", c => c.render("home"));
 
 app.use("*", serveStatic({ root: "./assets/dist/" }));
