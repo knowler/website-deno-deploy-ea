@@ -1,5 +1,6 @@
 {
 	"tasks": {
+		"dev": "deno serve -A main.js",
 		"css": "deno run -A scripts/css.js"
 	},
 	"imports": {

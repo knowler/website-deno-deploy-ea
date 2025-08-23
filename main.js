@@ -4,15 +4,20 @@ import { renderFile } from "pug";
 
 const app = new Hono();
 
-app.use("*", (c, next) => {
-	c.setRenderer(
-		(template, ...data) => c.html(renderFile(`routes/${template}.pug`, ...data)),
+app.use("*", async (c, next) => {
+	c.setRenderer((template, data = {}) =>
+		c.html(
+			renderFile(`routes/${template}.pug`, {
+				basedir: "./routes",
+				...data
+			}),
+		),
 	);
-	next();
+	await next();
 });
 
-app.use("*", serveStatic({ root: "./assets/dist" }));
-
 app.get("/", c => c.render("home"));
+
+app.use("*", serveStatic({ root: "./assets/dist/" }));
 
 export default app;
