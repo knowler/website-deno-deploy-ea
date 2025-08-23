@@ -1,7 +1,7 @@
 {
 	"tasks": {
-		"dev": "deno serve -A main.js",
-		"css": "deno run -A scripts/css.js"
+		"dev": "deno serve --allow-env --allow-sys=homedir --allow-read=./routes,./assets main.js",
+		"css": "deno run --allow-env --allow-ffi --allow-read=./assets/src --allow-write=./assets/dist tools/css.js"
 	},
 	"imports": {
 		"hono": "jsr:@hono/hono",

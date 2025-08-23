@@ -1,20 +1,11 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/deno";
-import { renderFile } from "pug";
+
+import { pugRenderer } from "./middleware/pug-renderer.js";
 
 const app = new Hono();
 
-app.use("*", async (c, next) => {
-	c.setRenderer((template, data = {}) =>
-		c.html(
-			renderFile(`routes/${template}.pug`, {
-				basedir: "./routes",
-				...data
-			}),
-		),
-	);
-	await next();
-});
+app.use("*", pugRenderer());
 
 app.get("/", c => c.render("home"));
 
