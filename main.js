@@ -11,7 +11,7 @@ app.use("*", (c, next) => {
 	next();
 });
 
-app.use("*", serveState({ root: "./assets/dist" }));
+app.use("*", serveStatic({ root: "./assets/dist" }));
 
 app.get("/", c => c.render("home"));
 
