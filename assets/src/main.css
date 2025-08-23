@@ -1,6 +1,6 @@
 :root {
 	color-scheme: dark light;
-	color: light-dark(RoyalBlue, DeepPink);
+	/*color: light-dark(RoyalBlue, DeepPink);*/
 	font-family: system-ui, sans-serif;
 	font-feature-settings: "ss06";
 }
