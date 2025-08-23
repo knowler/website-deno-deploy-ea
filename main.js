@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import { serveStatic } from "hono/deno";
 import { renderFile } from "pug";
 
 const app = new Hono();
@@ -9,6 +10,8 @@ app.use("*", (c, next) => {
 	);
 	next();
 });
+
+app.use("*", serveState({ root: "./assets/dist" }));
 
 app.get("/", c => c.render("home"));
 

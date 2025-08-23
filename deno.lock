@@ -2,6 +2,8 @@
   "version": "5",
   "specifiers": {
     "jsr:@hono/hono@*": "4.6.20",
+    "npm:@types/node@*": "22.13.1",
+    "npm:lightningcss@*": "1.28.1",
     "npm:pug@*": "3.0.3"
   },
   "jsr": {
@@ -28,6 +30,12 @@
       "dependencies": [
         "@babel/helper-string-parser",
         "@babel/helper-validator-identifier"
+      ]
+    },
+    "@types/node@22.13.1": {
+      "integrity": "sha512-jK8uzQlrvXqEU91UxiK5J7pKHyzgnI1Qnl0QDHIgVGuolJhRb9EEl28Cj9b3rGR8B2lhFCtvIm5os8lFnO/1Ew==",
+      "dependencies": [
+        "undici-types"
       ]
     },
     "acorn@7.4.1": {
@@ -72,6 +80,10 @@
         "@babel/parser",
         "@babel/types"
       ]
+    },
+    "detect-libc@1.0.3": {
+      "integrity": "sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==",
+      "bin": true
     },
     "doctypes@1.1.0": {
       "integrity": "sha512-LLBi6pEqS6Do3EKQ3J0NqHWV5hhb78Pi8vvESYwyOy2c31ZEZVdtitdzsQsKb7878PEERhzUk0ftqGhG6Mz+pQ=="
@@ -172,6 +184,124 @@
       "dependencies": [
         "is-promise",
         "promise"
+      ]
+    },
+    "lightningcss-cli-darwin-arm64@1.30.1": {
+      "integrity": "sha512-h00/Iq4Hjw+1Bm3Uoc2i1cryDdH1YhTK8e7d/Y/Wn2sUrdK9nVRxzuTk7qUur6KqVgXFthItAUhuGjFyDBJpmg==",
+      "os": ["darwin"],
+      "cpu": ["arm64"]
+    },
+    "lightningcss-cli-darwin-x64@1.30.1": {
+      "integrity": "sha512-Q7hzbzkGe5EUMgojjYgnhT9wkSLZp0I9Q25IP7IDnMv2KMTdqUSLAn7YMu9Xqt22MspAuIWV7DkyTiN4xM7fIA==",
+      "os": ["darwin"],
+      "cpu": ["x64"]
+    },
+    "lightningcss-cli-freebsd-x64@1.30.1": {
+      "integrity": "sha512-0VbQDecfjJn7GtvtVbsdEnvR8OY8PyWiVnchbozjODqE4ASpDBjQDtSMbIDRvBtkk5Me6PFhVmCKfuyctCuDqQ==",
+      "os": ["freebsd"],
+      "cpu": ["x64"]
+    },
+    "lightningcss-cli-linux-arm-gnueabihf@1.30.1": {
+      "integrity": "sha512-ngJVmTygPRafw2sF7NFWwez54NKDO2AEY5IEm241qytAw+YsY/oAx/0gG2Fyq4HTGcKud9dc7kHQpWfDTXuGHg==",
+      "os": ["linux"],
+      "cpu": ["arm"]
+    },
+    "lightningcss-cli-linux-arm64-gnu@1.30.1": {
+      "integrity": "sha512-2uh0vwHn0UyrZnVX2XCw8qbwLKuAwM1nLo43ddcviQum9rF08nHdPEqLXZfDzR/VA0pbyFjSw7EbbEBjXGsFxw==",
+      "os": ["linux"],
+      "cpu": ["arm64"]
+    },
+    "lightningcss-cli-linux-arm64-musl@1.30.1": {
+      "integrity": "sha512-IUrg/O4r7OPuGo+G9BGaDDodvAoLSq3f0pMmdiODCl8so/LkYvue7ySL8JQO8TebTKoUXE7VcZgdfoSVxkCbuQ==",
+      "os": ["linux"],
+      "cpu": ["arm64"]
+    },
+    "lightningcss-cli-linux-x64-gnu@1.30.1": {
+      "integrity": "sha512-AoxyUYuwl/IGTFl178Kxm/MMIgao3s9bmp/RrTbh51+8LsUh9YWolvyhmVxfiCauJ70dfoknQ/tsa+NKs2XDfQ==",
+      "os": ["linux"],
+      "cpu": ["x64"]
+    },
+    "lightningcss-cli-linux-x64-musl@1.30.1": {
+      "integrity": "sha512-NSkm/6sKsMTvO/pf8hU1Nwalrz9VsmSC9AKTYmxNsLDrLtzc8PYobcauyv0b1MnXxO1KuqLmFiCnVzGU7WbRPQ==",
+      "os": ["linux"],
+      "cpu": ["x64"]
+    },
+    "lightningcss-cli-win32-arm64-msvc@1.30.1": {
+      "integrity": "sha512-qDlhf9FAy+26MDMP14VWy+W5ho7KruR1ne2fYWKxgCGw7WZ5gnaaZpRBewp4KRd7lqo/opaIsK8kQy/WJTJD9A==",
+      "os": ["win32"],
+      "cpu": ["arm64"]
+    },
+    "lightningcss-cli-win32-x64-msvc@1.30.1": {
+      "integrity": "sha512-AwkpPbM9NABz1bRLr6GPrUa1wyOOUAZpOoR/HmDMOYPUAiQOlzxsNUR0/YreWbwD3X+dqkwXywSbwHddvTNZ1A==",
+      "os": ["win32"],
+      "cpu": ["x64"]
+    },
+    "lightningcss-darwin-arm64@1.28.1": {
+      "integrity": "sha512-VG3vvzM0m/rguCdm76DdobNeNJnHK+jWcdkNLFWHLh9YCotRvbRIt45JxwcHlIF8TDqWStVLTdghq5NaigVCBQ==",
+      "os": ["darwin"],
+      "cpu": ["arm64"]
+    },
+    "lightningcss-darwin-x64@1.28.1": {
+      "integrity": "sha512-O7ORdislvKfMohFl4Iq7fxKqdJOuuxArcglVI3amuFO5DJ0wfV3Gxgi1JRo49slfr7OVzJQEHLG4muTWYM5cTQ==",
+      "os": ["darwin"],
+      "cpu": ["x64"]
+    },
+    "lightningcss-freebsd-x64@1.28.1": {
+      "integrity": "sha512-b7sF89B31kYYijxVcFO7l5u6UNA862YstNu+3YbLl/IQKzveL4a5cwR5cdpG+OOhErg/c2u9WCmzZoX2I5GBvw==",
+      "os": ["freebsd"],
+      "cpu": ["x64"]
+    },
+    "lightningcss-linux-arm-gnueabihf@1.28.1": {
+      "integrity": "sha512-p61kXwvhUDLLzkWHjzSFfUBW/F0iy3jr3CWi3k8SKULtJEsJXTI9DqRm9EixxMSe2AMBQBt4auTYiQL4B1N51A==",
+      "os": ["linux"],
+      "cpu": ["arm"]
+    },
+    "lightningcss-linux-arm64-gnu@1.28.1": {
+      "integrity": "sha512-iO+fN9hOMmzfwqcG2/BgUtMKD48H2JO/SXU44fyIwpY2veb65QF5xiRrQ9l1FwIxbGK3231KBYCtAqv+xf+NsQ==",
+      "os": ["linux"],
+      "cpu": ["arm64"]
+    },
+    "lightningcss-linux-arm64-musl@1.28.1": {
+      "integrity": "sha512-dnMHeXEmCUzHHZjaDpQBYuBKcN9nPC3nPFKl70bcj5Bkn5EmkcgEqm5p035LKOgvAwk1XwLpQCML6pXmCwz0NQ==",
+      "os": ["linux"],
+      "cpu": ["arm64"]
+    },
+    "lightningcss-linux-x64-gnu@1.28.1": {
+      "integrity": "sha512-7vWDISaMUn+oo2TwRdf2hl/BLdPxvywv9JKEqNZB/0K7bXwV4XE9wN/C2sAp1gGuh6QBA8lpjF4JIPt3HNlCHA==",
+      "os": ["linux"],
+      "cpu": ["x64"]
+    },
+    "lightningcss-linux-x64-musl@1.28.1": {
+      "integrity": "sha512-IHCu9tVGP+x5BCpA2rF3D04DBokcBza/a8AuHQU+1AiMKubuMegPwcL7RatBgK4ztFHeYnnD5NdhwhRfYMAtNA==",
+      "os": ["linux"],
+      "cpu": ["x64"]
+    },
+    "lightningcss-win32-arm64-msvc@1.28.1": {
+      "integrity": "sha512-Erm72kHmMg/3h350PTseskz+eEGBM17Fuu79WW2Qqt0BfWSF1jHHc12lkJCWMYl5jcBHPs5yZdgNHtJ7IJS3Uw==",
+      "os": ["win32"],
+      "cpu": ["arm64"]
+    },
+    "lightningcss-win32-x64-msvc@1.28.1": {
+      "integrity": "sha512-ZPQtvx+uQBzrSdHH8p4H3M9Alue+x369TPZAA3b4K3d92FPhpZCuBG04+HQzspam9sVeID9mI6f3VRAs2ezaEA==",
+      "os": ["win32"],
+      "cpu": ["x64"]
+    },
+    "lightningcss@1.28.1": {
+      "integrity": "sha512-KRDkHlLlNj3DWh79CDt93fPlRJh2W1AuHV0ZSZAMMuN7lqlsZTV5842idfS1urWG8q9tc17velp1gCXhY7sLnQ==",
+      "dependencies": [
+        "detect-libc"
+      ],
+      "optionalDependencies": [
+        "lightningcss-darwin-arm64",
+        "lightningcss-darwin-x64",
+        "lightningcss-freebsd-x64",
+        "lightningcss-linux-arm-gnueabihf",
+        "lightningcss-linux-arm64-gnu",
+        "lightningcss-linux-arm64-musl",
+        "lightningcss-linux-x64-gnu",
+        "lightningcss-linux-x64-musl",
+        "lightningcss-win32-arm64-msvc",
+        "lightningcss-win32-x64-msvc"
       ]
     },
     "math-intrinsics@1.1.0": {
@@ -291,6 +421,9 @@
     },
     "token-stream@1.0.0": {
       "integrity": "sha512-VSsyNPPW74RpHwR8Fc21uubwHY7wMDeJLys2IX5zJNih+OnAnaifKHo+1LHT7DAdloQ7apeaaWg8l7qnf/TnEg=="
+    },
+    "undici-types@6.20.0": {
+      "integrity": "sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg=="
     },
     "void-elements@3.1.0": {
       "integrity": "sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w=="
