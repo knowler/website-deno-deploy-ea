@@ -1,7 +1,13 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/deno";
+import { cache } from 'hono/cache'
 
 import { pugRenderer } from "./middleware/pug-renderer.js";
+
+console.log({
+	deployment: Deno.env.get("DENO_DEPLOYMENT_ID"),
+	revision: Deno.env.get("DENO_REVISION_ID"),
+});
 
 const app = new Hono();
 
