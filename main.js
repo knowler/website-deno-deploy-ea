@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/deno";
-import { cache } from 'hono/cache'
+import { cache } from "hono/cache";
 
 import { pugRenderer } from "./middleware/pug-renderer.js";
 
@@ -15,11 +15,14 @@ app.use("*", pugRenderer());
 
 app.get("*", cache({
 	cacheName: "foo",
-	cacheControl: "s-maxage=300",
+	cacheControl: "max-age=300,s-maxage=300",
 	wait: true,
 }));
 
-app.get("/", c => c.render("home"));
+app.get("/", c => {
+	console.log("miss");
+	return c.render("home")
+});
 
 app.use("*", serveStatic({ root: "./assets/dist/" }));
 
