@@ -15,7 +15,7 @@ app.use("*", pugRenderer());
 
 app.get("*", cache({
 	cacheName: "foo",
-	cacheControl: "max-age=300",
+	cacheControl: "s-maxage=300",
 	wait: true,
 }));
 
